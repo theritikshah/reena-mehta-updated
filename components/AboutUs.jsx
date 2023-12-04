@@ -1,4 +1,3 @@
-import Image from "next/image";
 
 export default function AboutUs() {
   return (
@@ -6,8 +5,8 @@ export default function AboutUs() {
       <div className="container px-4 mx-auto 2xl:max-w-[1140px]">
         <div className="about-wrapper flex flex-wrap items-center max-w-[1200px] mx-auto relative lg:pb-[140px] md:py-[90px] py-[60px] z-10">
           <div className="about-img md:w-[450px] lg:w-[530px] w-[94%] mx-auto relative">
-            <Image src="/images/about-us-profile.svg" alt="about-us-profile" />
-            <Image
+            <img src="/images/about-us-profile.svg" alt="about-us-profile" />
+            <img
               src="/images/about-us-profile-badge.svg"
               alt="about-us-profile-award"
               className="absolute md:bottom-[-30px] md:right-[-30px] lg:w-[178px] md:w-[148px] bottom-[-10px] right-[-10px] w-[80px]"

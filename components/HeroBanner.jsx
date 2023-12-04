@@ -1,13 +1,6 @@
-import Image from "next/image";
-import ProfileImg from "/images/reena_mehta.png";
-import MusicImg01 from "/images/music-01.png";
-import MusicImg02 from "/images/music-02.png";
-import MusicImg03 from "/images/music-03.png";
-import MusicImg04 from "/images/music-04.png";
-import MusicImg05 from "/images/music-05.png";
 import Slider from "react-slick";
-import { HeroBannerJSON } from "../shared/Helper";
-import HeroBannerCard from "../shared/HeroBannerCard";
+import { HeroBannerJSON } from "./shared/Helper";
+import HeroBannerCard from "./shared/HeroBannerCard";
 
 export default function HeroBanner() {
   let settings = {
@@ -75,7 +68,7 @@ export default function HeroBanner() {
         </div>
         <div className="relative slider-profile max-w-[1530px] mr-auto">
           <div className="profile z-10">
-            <Image src={ProfileImg} alt="" />
+            <img src='/images/reena_mehta.png' alt="" />
           </div>
           <div className="slider-wrapper mt-[52px]">
             <Slider {...settings}>
@@ -91,19 +84,19 @@ export default function HeroBanner() {
           <div className="card-wrapper justify-center flex rounded-[16px] bg-white px-[25px] md:py-[34px] py-[25px] shadow-[0px_0px_32px_0px_rgba(0,0,0,0.12)]">
             <ul className="music-brand-list flex flex-wrap items-center mx-[-20px]">
               <li className="px-[20px] mb-[10px] md:mb-[0px]">
-                <Image alt="zee-music" src={MusicImg01} />
+                <img alt="zee-music" src='/images/music-01.png' />
               </li>
               <li className="px-[20px] mb-[10px] md:mb-[0px]">
-                <Image alt="music" src={MusicImg02} />
+                <img alt="music" src='/images/music-02.png' />
               </li>
               <li className="px-[20px] mb-[10px] md:mb-[0px]">
-                <Image alt="t-series" src={MusicImg03} />
+                <img alt="t-series" src='/images/music-03.png' />
               </li>
               <li className="px-[20px] mb-[10px] md:mb-[0px]">
-                <Image alt="eros_now" src={MusicImg04} />
+                <img alt="eros_now" src='/images/music-04.png' />
               </li>
               <li className="px-[20px]">
-                <Image alt="hungama_music" src={MusicImg05} />
+                <img alt="hungama_music" src='/images/music-05.png' />
               </li>
             </ul>
           </div>

@@ -1,16 +1,14 @@
 import Image from "next/image";
 import { Link, animateScroll as scroll } from "react-scroll";
-import FooterLogoImg from '../../assets/images/logo.svg';
-import FooterAbstractImg from '../../assets/images/footer-abstract.png';
 
 export default function Footer() {
   return (
     <footer className="footer-wrapper md:pt-[150px] pt-[50px] relative">
       <div className="container px-4 mx-auto 2xl:max-w-[1140px] relative z-10">
         <div className="footer-top md:mb-[90px] mb-[40px] relative">
-          <Image src={FooterAbstractImg} alt="footer-abstract-left" className="md:w-[300px] absolute left-0 md:ml-[-15px] md:block hidden"/>
-          <Image src={FooterAbstractImg} alt="footer-abstract-right" className="md:w-[300px] absolute right-0 md:mr-[-15px] md:block hidden"/>
-          <Image src={FooterLogoImg} alt="footer-logo" className="md:w-[360px] w-[280px] m-auto"/>
+          <img src='/images/footer-abstract.png' alt="footer-abstract-left" className="md:w-[300px] absolute left-0 md:ml-[-15px] md:block hidden"/>
+          <img src='/images/footer-abstract.png' alt="footer-abstract-right" className="md:w-[300px] absolute right-0 md:mr-[-15px] md:block hidden"/>
+          <img src='/images/logo.svg' alt="footer-logo" className="md:w-[360px] w-[280px] m-auto"/>
           <p className="text-black font-openSans text-[16px] leading-[22px] text-center opacity-[0.8] mt-[10px] mb-[20px]">Connect with the Melody</p>
           <ul className="m-[0px] flex flex-wrap items-center justify-center">
             <li className="mt-[15px]">

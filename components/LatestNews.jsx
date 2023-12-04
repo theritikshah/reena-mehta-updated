@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Slider from "react-slick";
-import NewsCard from '../shared/NewsCard';
-import { LatestNewsJSON } from "../shared/Helper";
+import NewsCard from './shared/NewsCard';
+import { LatestNewsJSON } from "./shared/Helper";
 
 export default function LatestNews() {
   let settings = {
