@@ -2,26 +2,334 @@
 @tailwind components;
 @tailwind utilities;
 
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+@import "../assets/icomoon/icomoon-style.css";
+
 :root {
   --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+  --primary-Color-01: #c25858;
+  --black: #160020;
+  --white: #ffffff;
 }
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+}
+
+header .navigation-menu ul li a.active {
+  color: var(--primary-Color-01);
+}
+
+.banner-section {
+  background-image: url("../assets/images/banner-bg.png");
+}
+
+.banner-wrapper:after {
+  content: "";
+  background-image: url("../assets/images/banner-abstract.png");
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 654px;
+  position: absolute;
+  top: -43px;
+  right: 0;
+}
+
+.slider-wrapper .slick-dots li button {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(194, 88, 88, 0.32);
+  padding: 0;
+  margin: 0;
+  transition: all 0.4s;
+}
+.slider-wrapper .slick-dots li {
+  width: auto;
+  height: auto;
+  margin: 0 1px;
+}
+.slider-wrapper .slick-dots li.slick-active button {
+  width: 33px;
+  background: var(--primary-Color-01);
+  border-radius: 20px;
+}
+.slider-wrapper .slick-dots button:before {
+  display: none;
+}
+.slider-wrapper .slick-slide {
+  padding: 10px;
+}
+.slider-wrapper .slick-current .item {
+  background: var(--primary-Color-01);
+  border-color: transparent;
+}
+.slider-wrapper .slick-current .item .item-content h2,
+.slider-wrapper .slick-current .item .item-content p {
+  color: var(--white);
+}
+
+.slider-profile .profile {
+  width: 557px;
+  height: 659px;
+  position: absolute;
+  bottom: -78px;
+  right: 0;
+}
+
+.slider-profile {
+  padding-right: 490px;
+}
+
+.about-section:after {
+  content: "";
+  background-image: url("../assets/images/about-bg.svg");
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 291px;
+  height: 472px;
+  transform: translateY(-50%);
+}
+.about-section:before {
+  content: "";
+  background-image: url("../assets/images/about-us-gradient.svg");
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  transform: translate(-50%, -50%);
+  background-size: contain;
+  background-position: top;
+}
+
+.about-wrapper .about-content {
+  width: calc(100% - 530px);
+}
+
+.musical-universe-wrapper {
+  background-image: url("../assets/images/musical-bg.svg");
+}
+
+.musical-universe-wrapper:after {
+  content: "";
+  background-image: url("../assets/images/rectangle.svg");
+  width: 100%;
+  height: 82px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.collaborates-wrapper:before {
+  content: "";
+  background-image: url("../assets/images/collaborates-left-bg.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.collaborates-wrapper:after {
+  content: "";
+  background-image: url("../assets/images/collaborates-right-bg.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.aesthetic-world-wrapper,
+.latest-news-wrapper {
+  background-image: url("../assets/images/asthetic-bg.svg");
+}
+
+.concert-wrapper:before {
+  content: "";
+  background-image: url("../assets/images/concert-left-bg.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.concert-wrapper:after {
+  content: "";
+  background-image: url("../assets/images/concert-right-bg.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.video-group {
+  padding: 20px 119px 50px 193px;
+}
+
+.white-shade-bg:after {
+  content: "";
+  background: linear-gradient(0deg, #fff 0%, rgba(255, 255, 255, 0) 100%);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+}
+.white-shade-bg:before {
+  content: "";
+  background: linear-gradient(180deg, #fff 0%, rgba(255, 255, 255, 0) 100%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+}
+
+.footer-wrapper:before {
+  content: "";
+  background-image: url("../assets/images/footer-left-bg.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.footer-wrapper:after {
+  content: "";
+  background-image: url("../assets/images/footer-right-bg.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Responsive */
+
+@media (max-width: 1199px) {
+  .slider-profile .profile {
+    width: 500px;
+    height: 592px;
+  }
+  .slider-profile {
+    padding-right: 430px;
+  }
+}
+@media (max-width: 1023px) {
+  header .navigation-menu {
+    position: fixed;
+    top: 69px;
+    left: -100%;
+    height: 100%;
+    z-index: 9;
+    transition: all 0.4s;
+  }
+  .navigation-menu-inner {
+    width: 300px;
+    height: 100%;
+    padding: 0 10px 10px;
+    background: var(--white);
+    position: relative;
+    z-index: 3;
+  }
+  header .navigation-menu.active {
+    left: 0;
+  }
+  header .navigation-menu:after {
+    content: "";
+    background-color: var(--black);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    opacity: 0.8;
+  }
+
+  .about-section:before {
+    background-size: cover;
+  }
+  .about-wrapper .about-content {
+    width: 100%;
+  }
+
+  .video-group {
+    padding: 15px 87px 38px 137px;
+  }
+}
+@media (max-width: 991px) {
+  .slider-profile {
+    padding-right: 0;
+    overflow: hidden;
+  }
+  .slider-profile .profile {
+    width: 400px;
+    height: auto;
+    margin: auto;
+    position: static;
+  }
+  .slider-wrapper {
+    margin-top: 40px;
+    padding-bottom: 30px;
+  }
+
+  .banner-content {
+    margin-bottom: 30px;
+  }
+  .banner-section {
+    background-position: top;
+    min-height: auto;
+    padding: 110px 0 78px;
+  }
+}
+@media (max-width: 767px) {
+  .about-section:before {
+    background-size: cover;
+  }
+  .white-shade-bg:before,
+  .white-shade-bg:after {
+    display: none;
+  }
+
+  .slider-profile .profile {
+    width: 100%;
+  }
+
+  .footer-wrapper:before {
+    background-size: cover;
+  }
+  .footer-wrapper:after {
+    display: none;
+  }
+  .video-group {
+    padding: 8px 42px 17px 65px;
+  }
+}
+
+@media (max-width: 359px) {
+  .concert-video {
+    width: 288px;
+  }
 }
