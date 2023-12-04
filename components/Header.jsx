@@ -11,7 +11,7 @@ export default function Header() {
         <div className="flex justify-between items-center mx-auto container px-4 2xl:max-w-[1140px]">
           <a href="#" className="flex items-center md:h-[35px] h-[29px]">
             <img
-              src="/images/logo.svg"
+              src="/images/logo.png"
               className="mr-3 w-full h-full"
               alt="Reena Mehta"
             />

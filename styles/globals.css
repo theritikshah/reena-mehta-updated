@@ -81,7 +81,7 @@ header .navigation-menu ul li a.active {
 
 .about-section:after {
   content: "";
-  background-image: url("/assets/images/about-bg.svg");
+  background-image: url("/assets/images/about-bg.png");
   background-repeat: no-repeat;
   position: absolute;
   top: 50%;
@@ -109,7 +109,7 @@ header .navigation-menu ul li a.active {
 }
 
 .musical-universe-wrapper {
-  background-image: url("/assets/images/musical-bg.svg");
+  background-image: url("/assets/images/musical-bg.png");
 }
 
 .musical-universe-wrapper:after {
@@ -148,7 +148,7 @@ header .navigation-menu ul li a.active {
 
 .aesthetic-world-wrapper,
 .latest-news-wrapper {
-  background-image: url("/assets/images/asthetic-bg.svg");
+  background-image: url("/assets/images/asthetic-bg.png");
 }
 
 .concert-wrapper:before {

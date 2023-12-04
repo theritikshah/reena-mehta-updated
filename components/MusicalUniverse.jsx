@@ -12,7 +12,7 @@ export default function MusicalUniverse() {
           <div className="rounded-2xl overflow-hidden md:mb-[0px] mb-[20px]">
             <img
               className="w-full lg:h-[528px] md:h-[336px] object-cover object-top"
-              src='/images/musical-universe/music01.svg'
+              src='/images/musical-universe/music01.png'
               alt="music01"
             />
           </div>
@@ -20,28 +20,28 @@ export default function MusicalUniverse() {
             <div className="rounded-2xl overflow-hidden md:mb-[24px] mb-[20px]">
               <img
                 className="w-full lg:h-[250px] md:h-[156px] object-cover object-top"
-                src='/images/musical-universe/music02.svg'
+                src='/images/musical-universe/music02.png'
                 alt="music02"
               />
             </div>
             <div className="rounded-2xl overflow-hidden">
               <img
                 className="w-full lg:h-[250px] md:h-[156px] object-cover object-top"
-                src='/images/musical-universe/music03.svg'
+                src='/images/musical-universe/music03.png'
                 alt="music03"
               />
             </div>
             <div className="rounded-2xl overflow-hidden md:mb-[24px] mb-[20px]">
               <img
                 className="w-full lg:h-[250px] md:h-[156px] object-cover object-top"
-                src='/images/musical-universe/music04.svg'
+                src='/images/musical-universe/music04.png'
                 alt="music04"
               />
             </div>
             <div className="rounded-2xl overflow-hidden">
               <img
                 className="w-full lg:h-[250px] md:h-[156px] object-cover object-top"
-                src='/images/musical-universe/music02.svg'
+                src='/images/musical-universe/music02.png'
                 alt="music05"
               />
             </div>
