@@ -3,7 +3,6 @@
 import Image from "next/image";
 import { useState } from "react";
 import { Link } from "react-scroll";
-import LogoImg from "../../assets/images/logo.svg";
 
 export default function Header() {
   const [isMenu, setIsMenu] = useState(false);
@@ -13,7 +12,7 @@ export default function Header() {
         <div className="flex justify-between items-center mx-auto container px-4 2xl:max-w-[1140px]">
           <a href="#" className="flex items-center md:h-[35px] h-[29px]">
             <Image
-              src={LogoImg}
+              src="/images/logo.svg"
               className="mr-3 w-full h-full"
               alt="Reena Mehta"
             />
