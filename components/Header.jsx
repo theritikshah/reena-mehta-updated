@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { Link } from "react-scroll";
+import Hamburger from "./shared/icon";
 
 export default function Header() {
   const [isMenu, setIsMenu] = useState(false);
@@ -9,7 +10,7 @@ export default function Header() {
     <header className="w-full fixed top-0 left-0 z-20 shadow-[0_0px_7px_rgba(0,0,0,0.1)]">
       <nav className="bg-white px-[15px] py-[20px]">
         <div className="flex justify-between items-center mx-auto container px-4 2xl:max-w-[1140px]">
-          <a href="#" className="flex items-center md:h-[35px] h-[29px]">
+          <a href="#" className="flex items-center h-[29px]">
             <img
               src="/images/logo.png"
               className="mr-3 w-full h-full"
@@ -18,7 +19,7 @@ export default function Header() {
           </a>
           <div className="lg:hidden flex">
             <a href="#" onClick={() => setIsMenu(!isMenu)}>
-              <i className="icon-bar text-primary_01 text-[32px]"></i>
+              <Hamburger />
             </a>
           </div>
           <div

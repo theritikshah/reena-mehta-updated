@@ -1,7 +1,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import "/icomoon/icomoon-style.css";
 
 :root {
   --foreground-rgb: 0, 0, 0;
@@ -19,12 +18,12 @@ header .navigation-menu ul li a.active {
 }
 
 .banner-section {
-  background-image: url("/assets/images/banner-bg.png");
+  background-image: url("/images/banner-bg.png");
 }
 
 .banner-wrapper:after {
   content: "";
-  background-image: url("/assets/images/banner-abstract.png");
+  background-image: url("/images/banner-abstract.png");
   background-repeat: no-repeat;
   width: 100%;
   height: 654px;
@@ -81,7 +80,7 @@ header .navigation-menu ul li a.active {
 
 .about-section:after {
   content: "";
-  background-image: url("/assets/images/about-bg.png");
+  background-image: url("/images/about-bg.png");
   background-repeat: no-repeat;
   position: absolute;
   top: 50%;
@@ -92,7 +91,7 @@ header .navigation-menu ul li a.active {
 }
 .about-section:before {
   content: "";
-  background-image: url("/assets/images/about-us-gradient.svg");
+  background-image: url("/images/about-us-gradient.svg");
   background-repeat: no-repeat;
   position: absolute;
   top: 50%;
@@ -109,12 +108,12 @@ header .navigation-menu ul li a.active {
 }
 
 .musical-universe-wrapper {
-  background-image: url("/assets/images/musical-bg.png");
+  background-image: url("/images/musical-bg.png");
 }
 
 .musical-universe-wrapper:after {
   content: "";
-  background-image: url("/assets/images/rectangle.svg");
+  background-image: url("/images/rectangle.svg");
   width: 100%;
   height: 82px;
   position: absolute;
@@ -124,7 +123,7 @@ header .navigation-menu ul li a.active {
 
 .collaborates-wrapper:before {
   content: "";
-  background-image: url("/assets/images/collaborates-left-bg.svg");
+  background-image: url("/images/collaborates-left-bg.svg");
   background-repeat: no-repeat;
   background-size: contain;
   position: absolute;
@@ -135,7 +134,7 @@ header .navigation-menu ul li a.active {
 }
 .collaborates-wrapper:after {
   content: "";
-  background-image: url("/assets/images/collaborates-right-bg.svg");
+  background-image: url("/images/collaborates-right-bg.svg");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: right;
@@ -148,12 +147,12 @@ header .navigation-menu ul li a.active {
 
 .aesthetic-world-wrapper,
 .latest-news-wrapper {
-  background-image: url("/assets/images/asthetic-bg.png");
+  background-image: url("/images/asthetic-bg.png");
 }
 
 .concert-wrapper:before {
   content: "";
-  background-image: url("/assets/images/concert-left-bg.svg");
+  background-image: url("/images/concert-left-bg.svg");
   background-repeat: no-repeat;
   background-size: contain;
   position: absolute;
@@ -164,7 +163,7 @@ header .navigation-menu ul li a.active {
 }
 .concert-wrapper:after {
   content: "";
-  background-image: url("/assets/images/concert-right-bg.svg");
+  background-image: url("/images/concert-right-bg.svg");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: right;
@@ -200,7 +199,7 @@ header .navigation-menu ul li a.active {
 
 .footer-wrapper:before {
   content: "";
-  background-image: url("/assets/images/footer-left-bg.png");
+  background-image: url("/images/footer-left-bg.png");
   background-repeat: no-repeat;
   background-size: contain;
   position: absolute;
@@ -211,7 +210,7 @@ header .navigation-menu ul li a.active {
 }
 .footer-wrapper:after {
   content: "";
-  background-image: url("/assets/images/footer-right-bg.png");
+  background-image: url("/images/footer-right-bg.png");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: right;

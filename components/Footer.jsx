@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Link, animateScroll as scroll } from "react-scroll";
+import { Facebook, Instagram, Youtube } from "./shared/icon";
 
 export default function Footer() {
   return (
@@ -8,7 +9,7 @@ export default function Footer() {
         <div className="footer-top md:mb-[90px] mb-[40px] relative">
           <img src='/images/footer-abstract.png' alt="footer-abstract-left" className="md:w-[300px] absolute left-0 md:ml-[-15px] md:block hidden"/>
           <img src='/images/footer-abstract.png' alt="footer-abstract-right" className="md:w-[300px] absolute right-0 md:mr-[-15px] md:block hidden"/>
-          <img src='/images/logo.svg' alt="footer-logo" className="md:w-[360px] w-[280px] m-auto"/>
+          <img src='/images/footer-logo.png' alt="footer-logo" className="md:w-[360px] w-[280px] m-auto"/>
           <p className="text-black font-openSans text-[16px] leading-[22px] text-center opacity-[0.8] mt-[10px] mb-[20px]">Connect with the Melody</p>
           <ul className="m-[0px] flex flex-wrap items-center justify-center">
             <li className="mt-[15px]">
@@ -63,9 +64,10 @@ export default function Footer() {
             </li>
           </ul>
           <ul className="mt-[30px] flex items-center justify-center">
-            <li className="p-[5px]"><a href="https://instagram.com/reens_mehta?igshid=NzZlODBkYWE4Ng==" target="_blank" className="p-[15px] rounded-[100%] bg-[rgba(194,88,88,0.16)] flex items-center justify-center text-[22px] w-[42px] h-[42px] text-black font-workSans font-medium"><i className="icon-instagram text-primary_01"></i></a></li>
-            <li className="p-[5px]"><a href="https://www.facebook.com/reenamehtasinger?mibextid=ZbWKwL" target="_blank" className="p-[15px] rounded-[100%] bg-[rgba(194,88,88,0.16)] flex items-center justify-center text-[22px] w-[42px] h-[42px] text-black font-workSans font-medium"><i className="icon-facebook text-primary_01"></i></a></li>
-            <li className="p-[5px]"><a href="#" className="p-[15px] rounded-[100%] bg-[rgba(194,88,88,0.16)] flex items-center justify-center text-[22px] w-[42px] h-[42px] text-black font-workSans font-medium"><i className="icon-youtube text-primary_01"></i></a></li>
+            <li className="p-[5px]">
+              <a href="https://instagram.com/reens_mehta?igshid=NzZlODBkYWE4Ng==" target="_blank" className="p-[15px] rounded-[100%] bg-[rgba(194,88,88,0.16)] flex items-center justify-center text-[22px] w-[42px] h-[42px] text-black font-workSans font-medium"><Instagram /></a></li>
+            <li className="p-[5px]"><a href="https://www.facebook.com/reenamehtasinger?mibextid=ZbWKwL" target="_blank" className="p-[15px] rounded-[100%] bg-[rgba(194,88,88,0.16)] flex items-center justify-center text-[22px] w-[42px] h-[42px] text-black font-workSans font-medium"><Facebook /></a></li>
+            <li className="p-[5px]"><a href="#" className="p-[15px] rounded-[100%] bg-[rgba(194,88,88,0.16)] flex items-center justify-center text-[22px] w-[42px] h-[42px] text-black font-workSans font-medium"><Youtube /></a></li>
             
           </ul>
         </div>
