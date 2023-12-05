@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { Link } from "react-scroll";
-import Hamburger from "./shared/icon";
+import { Hamburger } from "./shared/icon";
 
 export default function Header() {
   const [isMenu, setIsMenu] = useState(false);
