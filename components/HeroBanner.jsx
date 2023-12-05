@@ -6,11 +6,17 @@ export default function HeroBanner({ heroslider }) {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 3.5,
+    slidesToShow: 2,
     centerPadding: "50px",
     centerMode: true,
     arrows: false,
     responsive: [
+      {
+        breakpoint: 1921,
+        settings: {
+          slidesToShow: 3.5,
+        },
+      },
       {
         breakpoint: 1441,
         settings: {
@@ -53,7 +59,7 @@ export default function HeroBanner({ heroslider }) {
         className="banner-section min-h-[732px] bg-cover pt-[130px] pb-[78px]"
         id="home"
       >
-        <div className="container mx-auto px-4 2xl:max-w-[1140px]">
+        <div className="container mx-auto px-4 2xl:max-w-[1140px] relative">
           <div className="banner-wrapper relative md:w-[726px] ">
             <div className="banner-content max-w-[536px] relative z-10 mt-[20px]">
               <h1 className="font-workSans text-[52px] md:text-[82px] mb-[16px] font-extrabold leading-[52px] md:leading-[82px] text-black">
@@ -64,11 +70,11 @@ export default function HeroBanner({ heroslider }) {
               </p>
             </div>
           </div>
-        </div>
-        <div className="relative slider-profile max-w-[1530px] mr-auto">
-          <div className="profile z-10">
+          <div className="banner-profile z-10 absolute right-0">
             <img src="/images/reena_mehta.png" alt="" />
           </div>
+        </div>
+        <div className="relative slider-profile max-w-[1530px]">
           <div className="slider-wrapper mt-[52px]">
             <Slider {...settings}>
               {heroslider &&
