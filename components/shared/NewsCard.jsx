@@ -2,7 +2,7 @@ import imageUrlBuilder from "@sanity/image-url";
 import { client } from "../../utils/client";
 
 export default function NewsCard({ news }) {
-  const { mainImage, body, tag, title, _id } = news;
+  const { mainImage, body, tag, title } = news;
 
   function urlFor(source) {
     return imageUrlBuilder(client).image(source);

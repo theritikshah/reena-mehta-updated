@@ -10,13 +10,11 @@ import MusicalUniverse from "@/components/MusicalUniverse";
 import groq from "groq";
 import { client } from "../utils/client";
 
-export default function Home({ blogpost }) {
-  console.log(blogpost, "blogpost");
-
+export default function Home({ blogpost, heroslider }) {
   return (
     <>
       <Header />
-      <HeroBanner />
+      <HeroBanner heroslider={heroslider} />
       <AboutUs />
       <MusicalUniverse />
       <CollaboratesGenres />
@@ -32,9 +30,14 @@ export async function getServerSideProps() {
   const blogpost = await client.fetch(groq`
   *[_type == "blogpost" && publishedAt < now()] | order(publishedAt desc)
 `);
+
+  const heroslider = await client.fetch(groq`
+*[_type == "heroslider" && publishedAt < now()] | order(publishedAt desc)
+`);
   return {
     props: {
       blogpost,
+      heroslider,
     },
   };
 }
