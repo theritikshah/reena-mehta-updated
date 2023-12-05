@@ -1,5 +1,4 @@
 import Slider from "react-slick";
-import { LatestNewsJSON } from "./shared/Helper";
 import NewsCard from "./shared/NewsCard";
 
 export default function LatestNews({ blogpost }) {

@@ -11,11 +11,7 @@ import groq from "groq";
 import { client } from "../utils/client";
 
 export default function Home({ blogpost }) {
-  console.log(blogpost, "post");
-  const seoData = {
-    title: "Wafr - Home",
-    description: "Your Loyalty memberships & rewards in one place",
-  };
+  console.log(blogpost, "blogpost");
 
   return (
     <>
