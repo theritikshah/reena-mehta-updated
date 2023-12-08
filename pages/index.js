@@ -9,10 +9,14 @@ import LatestNews from "@/components/LatestNews";
 import MusicalUniverse from "@/components/MusicalUniverse";
 import groq from "groq";
 import { client } from "../utils/client";
+import Head from "next/head";
 
 export default function Home({ blogpost, heroslider }) {
   return (
     <>
+      <Head>
+        <title>Reena Mehta | When words leave off, music begins</title>
+      </Head>
       <Header />
       <HeroBanner heroslider={heroslider} />
       <AboutUs />
