@@ -1,5 +1,5 @@
+import { client } from "@/utils/client";
 import imageUrlBuilder from "@sanity/image-url";
-import { client } from "../../utils/client";
 
 export default function HeroBannerCard({ item }) {
   const { albumimage, albumlink, title, artist } = item;

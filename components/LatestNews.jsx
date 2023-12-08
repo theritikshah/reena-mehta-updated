@@ -21,6 +21,8 @@ export default function LatestNews({ blogpost }) {
       },
     ],
   };
+
+  console.log(blogpost);
   return (
     <section className="latest-news-wrapper white-shade-bg bg-no-repeat bg-cover md:py-[80px] py-[50px] relative">
       <div className="container px-4 mx-auto 2xl:max-w-[1140px]">

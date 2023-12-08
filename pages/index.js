@@ -9,17 +9,27 @@ import LatestNews from "@/components/LatestNews";
 import MusicalUniverse from "@/components/MusicalUniverse";
 import groq from "groq";
 import { client } from "../utils/client";
+import Head from "next/head";
 
-export default function Home({ blogpost, heroslider }) {
+export default function Home({
+  blogpost,
+  heroslider,
+  musicaluniverse,
+  liveconcert,
+  collaborates,
+}) {
   return (
     <>
+      <Head>
+        <title>Reena Mehta | When words leave off, music begins</title>
+      </Head>
       <Header />
       <HeroBanner heroslider={heroslider} />
       <AboutUs />
-      <MusicalUniverse />
-      <CollaboratesGenres />
+      <MusicalUniverse musicaluniverse={musicaluniverse} />
+      <CollaboratesGenres collaborates={collaborates} />
       <Aesthetic />
-      <Concert />
+      <Concert liveconcert={liveconcert} />
       <LatestNews blogpost={blogpost} />
       <Footer />
     </>
@@ -27,17 +37,32 @@ export default function Home({ blogpost, heroslider }) {
 }
 
 export async function getServerSideProps() {
-  const blogpost = await client.fetch(groq`
+  const blogpost = await client.fetch(groq` 
   *[_type == "blogpost" && publishedAt < now()] | order(publishedAt desc)
 `);
 
   const heroslider = await client.fetch(groq`
 *[_type == "heroslider" && publishedAt < now()] | order(publishedAt desc)
 `);
+  const musicaluniverse = await client.fetch(groq`
+*[_type == "musicaluniverse" && publishedAt < now()] | order(publishedAt desc)
+`);
+
+  const collaborates = await client.fetch(groq`
+*[_type == "collaborates" && publishedAt < now()] | order(publishedAt desc)
+`);
+
+  const liveconcert = await client.fetch(groq`
+*[_type == "liveconcert" && publishedAt < now()] | order(publishedAt desc)
+`);
+
   return {
     props: {
       blogpost,
       heroslider,
+      musicaluniverse,
+      liveconcert,
+      collaborates,
     },
   };
 }
