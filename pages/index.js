@@ -11,7 +11,12 @@ import groq from "groq";
 import { client } from "../utils/client";
 import Head from "next/head";
 
-export default function Home({ blogpost, heroslider, musicaluniverse }) {
+export default function Home({
+  blogpost,
+  heroslider,
+  musicaluniverse,
+  liveconcert,
+}) {
   return (
     <>
       <Head>
@@ -23,7 +28,7 @@ export default function Home({ blogpost, heroslider, musicaluniverse }) {
       <MusicalUniverse musicaluniverse={musicaluniverse} />
       <CollaboratesGenres />
       <Aesthetic />
-      <Concert />
+      <Concert liveconcert={liveconcert} />
       <LatestNews blogpost={blogpost} />
       <Footer />
     </>
@@ -42,11 +47,16 @@ export async function getServerSideProps() {
 *[_type == "musicaluniverse" && publishedAt < now()] | order(publishedAt desc)
 `);
 
+  const liveconcert = await client.fetch(groq`
+*[_type == "liveconcert" && publishedAt < now()] | order(publishedAt desc)
+`);
+
   return {
     props: {
       blogpost,
       heroslider,
       musicaluniverse,
+      liveconcert,
     },
   };
 }
