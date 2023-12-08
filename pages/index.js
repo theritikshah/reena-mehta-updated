@@ -16,6 +16,7 @@ export default function Home({
   heroslider,
   musicaluniverse,
   liveconcert,
+  collaborates,
 }) {
   return (
     <>
@@ -26,7 +27,7 @@ export default function Home({
       <HeroBanner heroslider={heroslider} />
       <AboutUs />
       <MusicalUniverse musicaluniverse={musicaluniverse} />
-      <CollaboratesGenres />
+      <CollaboratesGenres collaborates={collaborates} />
       <Aesthetic />
       <Concert liveconcert={liveconcert} />
       <LatestNews blogpost={blogpost} />
@@ -47,6 +48,10 @@ export async function getServerSideProps() {
 *[_type == "musicaluniverse" && publishedAt < now()] | order(publishedAt desc)
 `);
 
+  const collaborates = await client.fetch(groq`
+*[_type == "collaborates" && publishedAt < now()] | order(publishedAt desc)
+`);
+
   const liveconcert = await client.fetch(groq`
 *[_type == "liveconcert" && publishedAt < now()] | order(publishedAt desc)
 `);
@@ -57,6 +62,7 @@ export async function getServerSideProps() {
       heroslider,
       musicaluniverse,
       liveconcert,
+      collaborates,
     },
   };
 }
