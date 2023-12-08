@@ -11,8 +11,7 @@ import groq from "groq";
 import { client } from "../utils/client";
 import Head from "next/head";
 
-export default function Home({ blogpost, heroslider }) {
-  console.log(heroslider);
+export default function Home({ blogpost, heroslider, musicaluniverse }) {
   return (
     <>
       <Head>
@@ -21,7 +20,7 @@ export default function Home({ blogpost, heroslider }) {
       <Header />
       <HeroBanner heroslider={heroslider} />
       <AboutUs />
-      <MusicalUniverse />
+      <MusicalUniverse musicaluniverse={musicaluniverse} />
       <CollaboratesGenres />
       <Aesthetic />
       <Concert />
@@ -39,10 +38,15 @@ export async function getServerSideProps() {
   const heroslider = await client.fetch(groq`
 *[_type == "heroslider" && publishedAt < now()] | order(publishedAt desc)
 `);
+  const musicaluniverse = await client.fetch(groq`
+*[_type == "musicaluniverse" && publishedAt < now()] | order(publishedAt desc)
+`);
+
   return {
     props: {
       blogpost,
       heroslider,
+      musicaluniverse,
     },
   };
 }

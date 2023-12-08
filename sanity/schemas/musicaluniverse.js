@@ -1,8 +1,8 @@
 import { defineField } from "sanity";
 
-export const heroslider = {
-  name: "heroslider",
-  title: "Hero Slider",
+export const musicaluniverse = {
+  name: "musicaluniverse",
+  title: "Musical Universe",
   type: "document",
   fields: [
     {
@@ -10,20 +10,7 @@ export const heroslider = {
       title: "Title",
       type: "string",
     },
-    {
-      name: "slug",
-      title: "Slug",
-      type: "slug",
-      options: {
-        source: "title",
-        maxLength: 96,
-      },
-    },
-    {
-      name: "artist",
-      title: "Artist",
-      type: "string",
-    },
+
     {
       name: "albumimage",
       title: "Album image",
@@ -38,7 +25,7 @@ export const heroslider = {
       type: "url",
       validation: (Rule) =>
         Rule.uri({
-          scheme: ["http", "https"], // Specify allowed URL schemes here
+          scheme: ["http", "https"],
         }).error("Please enter a valid URL starting with http:// or https://"),
     }),
     {
