@@ -25,8 +25,11 @@ export default function NewsCard({ news }) {
           </p>
         </div>
       </div>
-      {body[0]?.children.map((obj) => (
-        <p className="font-openSans text-[16px] opacity-[0.8] leading-[24px] text-black text-center m-[20px]">
+      {body[0]?.children.map((obj, index) => (
+        <p
+          key={index}
+          className="font-openSans text-[16px] opacity-[0.8] leading-[24px] text-black text-center m-[20px]"
+        >
           {obj.text}
         </p>
       ))}

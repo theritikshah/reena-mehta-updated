@@ -31,7 +31,10 @@ export default function MusicalUniverse({ musicaluniverse }) {
           <div className="md:gap-[24px] gap-[20px] columns-2">
             {restelement &&
               restelement.map((obj, index) => (
-                <div className="rounded-2xl overflow-hidden md:mb-[24px] mb-[20px]">
+                <div
+                  key={index}
+                  className="rounded-2xl overflow-hidden md:mb-[24px] mb-[20px]"
+                >
                   <a href={obj.albumlink} key={index}>
                     <img
                       className="w-full lg:h-[250px] md:h-[156px] object-cover object-top"
