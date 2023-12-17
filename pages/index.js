@@ -13,7 +13,7 @@ import Head from "next/head";
 
 export default function Home({
   blogpost,
-  heroslider,
+  latestsongs,
   musicaluniverse,
   liveconcert,
   collaborates,
@@ -24,7 +24,7 @@ export default function Home({
         <title>Reena Mehta | When words leave off, music begins</title>
       </Head>
       <Header />
-      <HeroBanner heroslider={heroslider} />
+      <HeroBanner latestsongs={latestsongs} />
       <AboutUs />
       <MusicalUniverse musicaluniverse={musicaluniverse} />
       <CollaboratesGenres collaborates={collaborates} />
@@ -41,8 +41,8 @@ export async function getServerSideProps() {
   *[_type == "blogpost" && publishedAt < now()] | order(publishedAt desc)
 `);
 
-  const heroslider = await client.fetch(groq`
-*[_type == "heroslider" && publishedAt < now()] | order(publishedAt desc)
+  const latestsongs = await client.fetch(groq`
+*[_type == "latestsongs" && publishedAt < now()] | order(publishedAt desc)
 `);
   const musicaluniverse = await client.fetch(groq`
 *[_type == "musicaluniverse" && publishedAt < now()] | order(publishedAt desc)
@@ -59,7 +59,7 @@ export async function getServerSideProps() {
   return {
     props: {
       blogpost,
-      heroslider,
+      latestsongs,
       musicaluniverse,
       liveconcert,
       collaborates,

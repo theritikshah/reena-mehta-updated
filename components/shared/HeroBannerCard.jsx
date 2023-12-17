@@ -1,28 +1,21 @@
-import { client } from "@/utils/client";
-import imageUrlBuilder from "@sanity/image-url";
-
 export default function HeroBannerCard({ item }) {
-  const { albumimage, albumlink, title, artist } = item;
+  const { albumlink, title, artist } = item;
 
-  function urlFor(source) {
-    return imageUrlBuilder(client).image(source);
+  function extractVideoID(url) {
+    const regExp =
+      /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;
+    const match = url.match(regExp);
+    return match && match[2].length === 11 ? match[2] : null;
   }
 
+  const videoId = extractVideoID(albumlink);
+  const thumbnailUrl = `https://img.youtube.com/vi/${videoId}/0.jpg`;
+
   return (
-    <article className="min-h-[300] item relative z-10 rounded-[12px] bg-white p-[20px] border border-solid border-[rgba(0, 0, 0, 0.20)]">
+    <article className="min-h-[260px] item relative z-10 rounded-[12px] bg-white p-[20px] border border-solid border-[rgba(0, 0, 0, 0.20)]">
       <a href={albumlink} target="_blank" rel="noopener noreferrer">
         <div className="item-img relative h-[187px] overflow-hidden rounded-[8px]">
-          <img
-            src={urlFor(albumimage?.asset?._ref).url()}
-            alt={"music-" + title}
-            className="object-cover object-top h-full w-full"
-          />
-          <button
-            type="button"
-            className="btn-play w-[35px] h-[35px] absolute top-2/4 left-2/4 translate-y-[-50%] translate-x-[-50%]"
-          >
-            <img src="/images/play.png" alt="play-button" />
-          </button>
+          <img src={thumbnailUrl} alt={"music-" + title} />
         </div>
         <div className="item-content">
           <h2 className="text-black font-workSans text-[18px] font-medium leading-[24px] mt-[12px]">

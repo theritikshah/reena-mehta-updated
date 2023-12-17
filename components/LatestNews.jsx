@@ -27,7 +27,7 @@ export default function LatestNews({ blogpost }) {
     <section className="latest-news-wrapper white-shade-bg bg-no-repeat bg-cover md:py-[80px] py-[50px] relative">
       <div className="container px-4 mx-auto 2xl:max-w-[1140px]">
         <h2 className="font-workSans text-[36px] md:text-[48px] leading-[40px] md:leading-[58px] font-bold text-center mb-[30px] md:mb-[50px]">
-          Latest <span className="text-primary_01">News</span>
+          Upcoming <span className="text-primary_01">Songs</span>
         </h2>
 
         <div className="slider-wrapper md:mx-[0px] mx-[-15px]">

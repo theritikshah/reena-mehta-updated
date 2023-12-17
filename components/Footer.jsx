@@ -1,5 +1,5 @@
 import { Link } from "react-scroll";
-import { Facebook, Instagram, Youtube } from "./shared/icon";
+import { Facebook, Instagram, Gmail } from "./shared/icon";
 
 export default function Footer() {
   return (
@@ -107,10 +107,10 @@ export default function Footer() {
             </li>
             <li className="p-[5px]">
               <a
-                href="#"
+                href="mailto:ashureenam@hotmail.com"
                 className="p-2 rounded-[100%] bg-[rgba(194,88,88,0.16)] flex items-center justify-center text-[22px] w-[42px] h-[42px] text-black font-workSans font-medium"
               >
-                <Youtube />
+                <Gmail />
               </a>
             </li>
           </ul>

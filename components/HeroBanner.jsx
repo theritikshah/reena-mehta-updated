@@ -1,7 +1,7 @@
 import Slider from "react-slick";
 import HeroBannerCard from "./shared/HeroBannerCard";
 
-export default function HeroBanner({ heroslider }) {
+export default function HeroBanner({ latestsongs }) {
   const settings = {
     dots: true,
     infinite: true,
@@ -77,9 +77,9 @@ export default function HeroBanner({ heroslider }) {
         <div className="relative slider-profile max-w-[1530px]">
           <div className="slider-wrapper mt-[52px]">
             <Slider {...settings}>
-              {heroslider &&
-                heroslider.length > 0 &&
-                heroslider?.map((data, index) => {
+              {latestsongs &&
+                latestsongs.length > 0 &&
+                latestsongs?.map((data, index) => {
                   return <HeroBannerCard item={data} key={index} />;
                 })}
             </Slider>

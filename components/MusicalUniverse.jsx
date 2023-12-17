@@ -20,13 +20,11 @@ export default function MusicalUniverse({ musicaluniverse }) {
         </h2>
         <div className="md:gap-[24px] gap-[20px] md:columns-2">
           <div className="rounded-2xl overflow-hidden md:mb-[0px] mb-[20px]">
-            <a href={first.albumlink}>
-              <img
-                className="w-full lg:h-[528px] md:h-[336px] object-cover object-top"
-                src={urlFor(first.albumimage?.asset?._ref).url()}
-                alt="music01"
-              />
-            </a>
+            <img
+              className="w-full lg:h-[528px] md:h-[336px] object-cover object-top"
+              src={urlFor(first.albumimage?.asset?._ref).url()}
+              alt="music01"
+            />
           </div>
           <div className="md:gap-[24px] gap-[20px] columns-2">
             {restelement &&
@@ -35,13 +33,11 @@ export default function MusicalUniverse({ musicaluniverse }) {
                   key={index}
                   className="rounded-2xl overflow-hidden md:mb-[24px] mb-[20px]"
                 >
-                  <a href={obj.albumlink} key={index}>
-                    <img
-                      className="w-full lg:h-[250px] md:h-[156px] object-cover object-top"
-                      src={urlFor(obj.albumimage?.asset?._ref).url()}
-                      alt={obj.title}
-                    />
-                  </a>
+                  <img
+                    className="w-full lg:h-[250px] md:h-[156px] object-cover object-top"
+                    src={urlFor(obj.albumimage?.asset?._ref).url()}
+                    alt={obj.title}
+                  />
                 </div>
               ))}
           </div>

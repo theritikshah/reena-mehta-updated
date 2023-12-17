@@ -1,8 +1,8 @@
 import { defineField } from "sanity";
 
-export const heroslider = {
-  name: "heroslider",
-  title: "Hero Slider",
+export const latestsongs = {
+  name: "latestsongs",
+  title: "Latest Songs",
   type: "document",
   fields: [
     {
@@ -24,14 +24,14 @@ export const heroslider = {
       title: "Artist",
       type: "string",
     },
-    {
-      name: "albumimage",
-      title: "Album image",
-      type: "image",
-      options: {
-        hotspot: true,
-      },
-    },
+    // {
+    //   name: "albumimage",
+    //   title: "Album image",
+    //   type: "image",
+    //   options: {
+    //     hotspot: true,
+    //   },
+    // },
     defineField({
       name: "albumlink",
       title: "Album Link",
