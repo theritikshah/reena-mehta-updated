@@ -56,14 +56,14 @@ export default function HeroBanner({ latestsongs }) {
   return (
     <>
       <div
-        className="banner-section min-h-[732px] bg-cover pt-[130px] pb-[78px]"
+        className="banner-section min-h-[732px] bg-cover pt-[210px] pb-[78px]"
         id="home"
       >
         <div className="container mx-auto px-4 2xl:max-w-[1140px] relative">
           <div className="banner-wrapper relative md:w-[726px] ">
             <div className="banner-content max-w-[536px] relative z-10 mt-[20px]">
               <h1 className="font-workSans text-[52px] md:text-[82px] mb-[16px] font-extrabold leading-[52px] md:leading-[82px] text-black">
-                Hello I Am <span className="text-primary_01">Reena Mehta</span>
+                <span className="text-primary_01">Reena Mehta</span>
               </h1>
               <p className="font-openSans text-[20px] opacity-[0.8] leading-[24px] text-black">
                 When words leave off, music begins
