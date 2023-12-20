@@ -2,12 +2,11 @@ import { client } from "@/utils/client";
 import imageUrlBuilder from "@sanity/image-url";
 
 export default function CollaboratesGenres({ collaborates }) {
-  console.log(collaborates, "collaborates");
-
   const { mainImage, Description } = collaborates[0];
   function urlFor(source) {
     return imageUrlBuilder(client).image(source);
   }
+
   return (
     <section
       className="collaborates-wrapper bg-center bg-no-repeat bg-cover lg:pt-[150px] lg:pb-[100px] md:py-[80px] py-[40px] relative"

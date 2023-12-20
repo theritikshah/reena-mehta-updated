@@ -1,8 +1,6 @@
 import Iframe from "react-iframe";
 
 export default function Concert({ liveconcert }) {
-  console.log(liveconcert, "liveconcert");
-
   const liveconcertlink = liveconcert[0];
 
   return (

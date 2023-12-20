@@ -53,6 +53,8 @@ export default function HeroBanner({ latestsongs }) {
     ],
   };
 
+  console.log(latestsongs, "latestsongs");
+
   return (
     <>
       <div

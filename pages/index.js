@@ -42,8 +42,9 @@ export async function getServerSideProps() {
 `);
 
   const latestsongs = await client.fetch(groq`
-*[_type == "latestsongs" && publishedAt < now()] | order(publishedAt desc)
+*[_type == "latestsongs" && publishedAt < now()] | order(publishedAt asc)
 `);
+
   const musicaluniverse = await client.fetch(groq`
 *[_type == "musicaluniverse" && publishedAt < now()] | order(publishedAt desc)
 `);
