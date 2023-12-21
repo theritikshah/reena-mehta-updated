@@ -65,9 +65,6 @@ export default function HeroBanner({ latestsongs }) {
               <h1 className="font-workSans text-[52px] md:text-[82px] mb-[16px] font-extrabold leading-[52px] md:leading-[82px] text-black">
                 <span className="text-primary_01">Reena Mehta</span>
               </h1>
-              <p className="font-openSans text-[20px] opacity-[0.8] leading-[24px] text-black">
-                When words leave off, music begins
-              </p>
             </div>
           </div>
           <div className="banner-profile z-10 absolute right-0">

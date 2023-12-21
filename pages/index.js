@@ -21,7 +21,7 @@ export default function Home({
   return (
     <>
       <Head>
-        <title>Reena Mehta | When words leave off, music begins</title>
+        <title>Reena Mehta</title>
       </Head>
       <Header />
       <HeroBanner latestsongs={latestsongs} />
